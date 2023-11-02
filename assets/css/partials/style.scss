@@ -1,0 +1,66 @@
+@import "reset";
+@import "colors";
+@import "fonts";
+@import "spacing";
+@import "buttons";
+@import "mixins";
+
+body {
+  width: 100%;
+  height: 100vh;
+  font: {
+    family: $font-family-main;
+  }
+  nav {
+    width: 100%;
+    background-color: #d82d2da1;
+
+    ul {
+      @include flex();
+      justify-content: space-around;
+      border-radius: 99em;
+
+      padding: 20px;
+      li {
+        img {
+          width: 60px;
+          border-radius: 99em;
+          @include floating;
+        }
+        a {
+          text-decoration: none;
+          color: $text-color-main;
+          color: #d9d9d9;
+
+          text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),
+            1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+  }
+  .hero {
+    background-color: $bg-hero;
+    @include flex();
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 150px;
+    h3 {
+      @include title-big("Roboto");
+      color: $text-color-main;
+    }
+    img {
+      width: 400px;
+      height: 500px;
+      @include floating();
+      object-fit: cover;
+    }
+  }
+  .grid {
+    @include grid();
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.button-generic {
+  border-radius: 99em;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.button-1 {
+  @extend .button-generic;
+  background-color: $button-color-main;
+}
+.button-2 {
+  @extend .button-generic;
+  background-color: $button-color-alt;
+}
+.button-3 {
+  @extend .button-generic;
+  background-color: $button-color-extra;
+}
