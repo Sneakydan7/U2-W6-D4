@@ -4,6 +4,7 @@
 @import "spacing";
 @import "buttons";
 @import "mixins";
+@import "animations";
 
 body {
   width: 100%;
@@ -44,6 +45,7 @@ body {
     flex-wrap: wrap;
     padding: 150px;
     h3 {
+      @include animation;
       @include title-big("Roboto");
       color: $text-color-main;
       text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),
