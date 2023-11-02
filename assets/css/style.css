@@ -175,10 +175,17 @@ body .hero img {
 }
 body .grid {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  flex-wrap: wrap;
 }
-body .grid img {
+body .grid > div {
+  width: 25%;
+}
+body .grid div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .grid div img {
   width: 150px;
   height: 150px;
   -o-object-fit: cover;

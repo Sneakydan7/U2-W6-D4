@@ -57,17 +57,22 @@ body {
     }
   }
   .grid {
-    @include grid();
+    @include grid(4);
 
-    img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      @include floating();
-      box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px,
-        rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px,
-        rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
-      border-radius: 99em;
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        @include floating();
+        box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px,
+          rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px,
+          rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+        border-radius: 99em;
+      }
     }
   }
 }

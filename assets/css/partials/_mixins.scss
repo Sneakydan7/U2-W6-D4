@@ -13,10 +13,13 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-@mixin grid() {
+@mixin grid($value) {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  flex-wrap: wrap;
+
+  > div {
+    width: calc(100 / $value) * 1%;
+  }
 }
 
 @mixin flex() {
