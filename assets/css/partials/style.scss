@@ -20,7 +20,6 @@ body {
       justify-content: space-around;
       border-radius: 99em;
 
-      padding: 20px;
       li {
         img {
           width: 60px;
@@ -47,6 +46,8 @@ body {
     h3 {
       @include title-big("Roboto");
       color: $text-color-main;
+      text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),
+        1px 1px 1px rgba(0, 0, 0, 0.5);
     }
     img {
       width: 400px;
@@ -57,10 +58,13 @@ body {
   }
   .grid {
     @include grid();
+
     img {
       width: 150px;
       height: 150px;
       object-fit: cover;
+      @include floating();
+      border-radius: 99em;
     }
   }
 }
